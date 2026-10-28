@@ -104,7 +104,7 @@ export function renderApp(root: HTMLElement): void {
   root.innerHTML = `
     <div class="announcement"><span class="announcement-dot"></span> One community. A greener India. <span class="announcement-divider">·</span> Every small action matters.</div>
     <header class="site-header"><a href="#home" class="brand" aria-label="Green India home"><span class="brand-mark">${icon('leaf', 25)}</span><span>green<span class="brand-accent">india</span><small>CARE FOR OUR COMMON HOME</small></span></a>
-      <nav class="desktop-nav" aria-label="Main navigation"><a href="#issues">Community reports</a><a href="#action">Take action</a><a href="#learn">Learn & grow</a></nav>
+      <nav class="desktop-nav" aria-label="Main navigation"><a href="#issues">Community reports</a><a href="#action">Take action</a><a href="#learn">Tips & guides</a><a href="#about">About us</a></nav>
       <button class="button button-primary header-cta" id="open-report">${icon('plus', 17)} Report an issue</button><button class="icon-button mobile-menu" id="mobile-menu" aria-label="Toggle navigation">${icon('menu')}</button>
     </header>
     <main id="home">
@@ -123,6 +123,7 @@ export function renderApp(root: HTMLElement): void {
       </section>
       <section class="action-section" id="action"><div class="section-wrap action-layout"><div class="action-copy"><span class="eyebrow">YOUR DAILY GREEN CHECK-IN</span><h2>Good for the planet.<br><span>Good for your habits.</span></h2><p>Pick a few small actions. Tick them off as you do them and build a greener routine, one day at a time.</p><div class="habit-card"><div class="habit-card-head"><div><span class="habit-label">TODAY'S GREEN GOALS</span><h3>Your eco checklist</h3></div><div class="habit-score" id="habit-score">0/5</div></div><div class="progress-track"><span id="habit-progress"></span></div><div id="habit-list" class="habit-list"></div><div class="habit-card-foot"><span>🌱 Every little bit counts.</span><button id="reset-habits" class="text-button">Reset checklist</button></div></div></div><div class="action-side"><div class="side-decoration deco-one">✳</div><div class="side-decoration deco-two">✦</div><div class="action-illustration"><div class="plant-pot"><div class="plant-stem"></div><i></i><b></b><em></em><span></span></div><div class="soil"></div><div class="small-sprout">✧</div></div><div class="quote-card"><span>“</span><p>We do not inherit the Earth from our ancestors; we borrow it from our children.</p><small>A reminder to leave the planet better than we found it.</small></div></div></div></section>
       <section class="section-wrap learn-section" id="learn"><div class="section-heading"><div><span class="eyebrow">KNOW A LITTLE. DO A LOT.</span><h2>Greener living, <span>made simple.</span></h2><p>Easy, practical ideas you can bring into your everyday life.</p></div><span class="learn-stamp">LEARN · ACT · REPEAT</span></div><div class="tips-grid">${tips.map((tip, index) => `<article class="tip-card tip-${index + 1}"><div class="tip-top"><span class="tip-emoji">${tip.icon}</span><span class="tip-tag">${tip.tag}</span></div><h3>${tip.title}</h3><p>${tip.body}</p><a href="#resources">Explore the basics ${icon('arrow', 16)}</a></article>`).join('')}</div></section>
+      <section class="about-section" id="about"><div class="section-wrap about-layout"><div class="about-copy"><span class="eyebrow">ABOUT GREEN INDIA</span><h2>A small website<br>for a <span>greener future.</span></h2><p>Green India is a community awareness project built to make environmental learning practical and local. It brings everyday eco-tips, simple habit tracking and a place to share concerns about waste, water, roads and green spaces together in one easy-to-use website.</p><p>Our goal is to help people notice issues, learn helpful habits and start respectful conversations about caring for their neighbourhoods. Every report is community-submitted and should be checked before anyone treats it as verified.</p><div class="about-credit"><span class="about-leaf">${icon('leaf', 21)}</span><div><strong>Web Created By Xtreme</strong><small>Designed for awareness, learning and community action.</small></div></div></div><div class="about-cards"><article class="about-card about-card-main"><span>🌱</span><strong>Learn something useful</strong><p>Simple guidance on trees, plants, water, waste, energy and wildlife.</p></article><article class="about-card"><span>📍</span><strong>Notice local issues</strong><p>Search community posts by city, area or address.</p></article><article class="about-card"><span>✅</span><strong>Build better habits</strong><p>Track small actions at your own pace.</p></article><div class="about-orbit orbit-a"></div><div class="about-orbit orbit-b"></div></div></div></section>
       <section class="school-section"><div class="section-wrap school-banner"><div class="school-icon">🏫</div><div><span class="eyebrow">FOR SCHOOLS & COMMUNITIES</span><h2>Make green action a team sport.</h2><p>Try a clean-up awareness day, a waste-separation demo, a water-saving audit or a native-plant care group. Always work with a teacher or responsible adult for outdoor activities.</p></div><a href="#resources" class="button button-light">Explore activity ideas ${icon('arrow', 17)}</a><div class="school-deco">✳</div></div></section>
       <section class="section-wrap resources-section" id="resources"><div class="resource-heading"><span class="eyebrow">A GOOD PLACE TO START</span><h2>Learn from trusted sources.</h2><p>Check official guidance and local rules before organising an activity.</p></div><div class="resource-grid">
         <a class="resource-card" href="https://moef.gov.in/" target="_blank" rel="noopener noreferrer"><span class="resource-icon green">🌿</span><div><strong>Ministry of Environment, Forest and Climate Change</strong><small>National environment policies and updates</small></div>${icon('arrow', 17)}</a>
@@ -131,13 +132,34 @@ export function renderApp(root: HTMLElement): void {
       </div></section>
       <section class="final-cta"><div class="final-cta-inner"><div class="final-leaf">${icon('leaf', 28)}</div><span class="eyebrow">THE NEXT STEP IS YOURS</span><h2>Don't just wish for a<br>better world. <span>Help grow one.</span></h2><p>Notice something that needs attention? Share a clear, respectful report with your community.</p><button class="button button-light button-large" id="final-report">${icon('plus', 18)} Share a local issue</button><div class="cta-orbit orbit-one"></div><div class="cta-orbit orbit-two"></div></div></section>
     </main>
-    <footer class="site-footer"><div class="footer-top"><a href="#home" class="brand footer-brand"><span class="brand-mark">${icon('leaf', 23)}</span><span>green<span class="brand-accent">india</span><small>CARE FOR OUR COMMON HOME</small></span></a><p>A community project for a cleaner, greener tomorrow.</p><div class="footer-links"><a href="#issues">Community</a><a href="#action">Eco tracker</a><a href="#resources">Resources</a></div></div><div class="footer-bottom"><span>© ${new Date().getFullYear()} Green India</span><span>Web Created By <strong>Xtreme</strong></span><span>Made with care for our planet <span class="footer-heart">♥</span></span></div><p class="footer-disclaimer">Independent community project. Not affiliated with any government authority. Demo reports are examples, not verified incidents.</p></footer>
+    <footer class="site-footer"><div class="footer-top"><a href="#home" class="brand footer-brand"><span class="brand-mark">${icon('leaf', 23)}</span><span>green<span class="brand-accent">india</span><small>CARE FOR OUR COMMON HOME</small></span></a><p>A community project for a cleaner, greener tomorrow.</p><div class="footer-links"><a href="#issues">Community</a><a href="#action">Eco tracker</a><a href="#learn">Tips</a><a href="#about">About</a><a href="#resources">Resources</a></div></div><div class="footer-bottom"><span>© ${new Date().getFullYear()} Green India</span><span>Web Created By <strong>Xtreme</strong></span><span>Made with care for our planet <span class="footer-heart">♥</span></span></div><p class="footer-disclaimer">Independent community project. Not affiliated with any government authority. Demo reports are examples, not verified incidents.</p></footer>
     ${modalMarkup()}<div id="toast" class="toast" role="status" aria-live="polite"></div>`;
 
   renderReports();
   renderHabits();
   bindEvents();
+  initRevealAnimations();
   void loadOnlineReports();
+}
+
+function initRevealAnimations(): void {
+  const targets = document.querySelectorAll<HTMLElement>(
+    '.hero-copy, .hero-art, .impact-item, .section-heading, .report-card, .habit-card, .action-side, .tip-card, .about-copy, .about-card, .school-banner, .resource-card, .final-cta-inner'
+  );
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  targets.forEach((target, index) => {
+    target.classList.add('reveal-on-scroll');
+    target.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 65}ms`);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+  targets.forEach(target => observer.observe(target));
 }
 
 async function loadOnlineReports(): Promise<void> {

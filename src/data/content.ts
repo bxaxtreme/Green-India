@@ -6,10 +6,18 @@ export const categories: IssueCategory[] = [
 ];
 
 export const tips = [
-  { icon: '💧', tag: 'SAVE WATER', title: 'Turn off the tap while brushing', body: 'A small daily habit helps reduce unnecessary water use at home.' },
-  { icon: '♻️', tag: 'WASTE SMART', title: 'Separate wet and dry waste', body: 'Keep food scraps separate from clean paper, metal, glass and plastic.' },
-  { icon: '🌿', tag: 'GO GREEN', title: 'Carry a reusable bottle', body: 'Make reusables part of your everyday bag to avoid single-use bottles.' },
-  { icon: '🌳', tag: 'GROW LOCAL', title: 'Care for a native plant', body: 'Choose a suitable local species and look after it after planting.' }
+  { icon: '💧', tag: 'SAVE WATER', title: 'Turn off the tap while brushing', body: 'Turn water off while brushing or soaping your hands. Fix dripping taps and report public leaks when you spot them.' },
+  { icon: '🌧️', tag: 'RAINWATER', title: 'Collect rainwater where safe', body: 'Ask an adult or building manager about rooftop rainwater harvesting and keep drains clear before the monsoon.' },
+  { icon: '🌳', tag: 'PLANT & PROTECT', title: 'Choose a native tree', body: 'Native trees are often better suited to local weather and wildlife. Check the right species and planting space before planting.' },
+  { icon: '🪴', tag: 'PLANT CARE', title: 'Help a plant survive', body: 'Water young plants as needed, protect their roots and use mulch to help soil retain moisture. A planted sapling needs care.' },
+  { icon: '♻️', tag: 'WASTE SMART', title: 'Separate wet and dry waste', body: 'Keep food scraps apart from clean paper, metal, glass and plastic. Follow your local collection rules.' },
+  { icon: '🍂', tag: 'COMPOST', title: 'Turn suitable scraps into compost', body: 'With guidance, compost fruit and vegetable scraps and dry leaves. Keep meat, dairy and oily food out of a simple home pile.' },
+  { icon: '🧴', tag: 'LESS PLASTIC', title: 'Carry reusable essentials', body: 'Bring a refillable bottle, lunch box and cloth bag when practical. Reuse what you already own before buying more.' },
+  { icon: '⚡', tag: 'SAVE ENERGY', title: 'Switch off what you are not using', body: 'Turn off lights, fans and devices when they are not needed. Use daylight and ventilation when conditions allow.' },
+  { icon: '🚲', tag: 'CLEANER TRAVEL', title: 'Walk or cycle for short trips', body: 'When the route is safe and suitable, walking, cycling or sharing a ride can reduce traffic and emissions.' },
+  { icon: '🐝', tag: 'WILDLIFE', title: 'Make space for pollinators', body: 'Grow locally suitable flowering plants, avoid disturbing nests and never handle wild animals. Keep water bowls clean and safe.' },
+  { icon: '💻', tag: 'E-WASTE', title: 'Dispose of electronics responsibly', body: 'Do not burn or break batteries and electronics. Find an authorised e-waste collection point in your area.' },
+  { icon: '🧹', tag: 'CLEAN COMMUNITY', title: 'Keep drains and public spaces clear', body: 'Use bins and report dumping or blocked drains. Never enter drains or polluted water to clean them yourself.' }
 ];
 
 export const demoReports: IssueReport[] = [

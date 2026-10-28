@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/types.ts","./src/vite-env.d.ts","./src/data/content.ts","./src/services/storage.ts","./src/services/supabase.ts","./src/ui/app.ts","./src/ui/icons.ts"],"errors":true,"version":"5.8.3"}

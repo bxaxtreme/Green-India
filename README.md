@@ -9,7 +9,11 @@ A light, responsive, mobile-first environmental community website. Built with **
 - Report form with title, category, description, address/landmark, city, state, optional photo and optional mobile number.
 - Image validation (JPG/PNG/WebP, max 5 MB), input checks and privacy reminders.
 - Local eco-habit checklist saved in the visitor's browser.
-- Environmental tips, school activity ideas and official information links.
+- 12 practical eco-tips covering water saving, rainwater harvesting, native trees, plant care, composting, plastic reduction, energy, cleaner travel, wildlife and e-waste.
+- A dedicated About Green India section explaining the website mission and creator credit.
+- Lightweight scroll-reveal animations, floating decorative motion and reduced-motion accessibility support.
+- Mobile-first layouts with larger readable tip cards and a single-column layout on small phones.
+- School activity ideas and official information links.
 - Clearly labelled demo/sample reports.
 - Footer credit: **Web Created By Xtreme**.
 - Works as a static frontend on Vercel or GitHub Pages. Real public sharing and cross-visitor location search require Supabase setup.
@@ -105,3 +109,9 @@ green-india/
 
 ## Creator
 **Web Created By Xtreme**
+
+
+### Version 4 visual refresh
+- Added a coordinated multi-colour palette using leaf green, teal, sky blue, sunshine yellow, and soft coral accents.
+- Added subtle pastel gradients to tip cards, resource cards, community report placeholders, About section, and calls to action.
+- Kept contrast, responsive layouts, and reduced-motion preferences in mind.
